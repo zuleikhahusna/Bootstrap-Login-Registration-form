@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.row {
+  background-color: #7e0b0b;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+h3,
+label {
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  color: #fff;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.create {
+  text-align: start;
+  margin: 20px;
+}
+
+.create a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.create a:hover {
+  color: #e01b22;
+}
+
+img {
+  border-top-left-radius: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.first img {
+  margin-left: 30%;
+  margin-top: 20px;
+  border-radius: 0;
+  animation: rotate 2s infinite linear;
+  transition: transform 0.3s;
+}
+
+
+form .btn {
+  background-color: #e01b22;
+  border-color: #e01b22;
+  margin-left: 30%;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+form .btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .first img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-135%);
+  }
+  form .btn {
+    margin-left: 40%;
+  }
+  .img {
+    width: 100%;
+  }
+  .create {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
